@@ -80,7 +80,6 @@ class ZxingQrCodeAnalyzer(
         } catch (ise: IllegalStateException) {
             ise.printStackTrace()
         } finally {
-//            imageProxy.image?.close()
             imageProxy.close()
         }
     }

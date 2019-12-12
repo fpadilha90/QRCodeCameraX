@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         rxPermissions.request(android.Manifest.permission.CAMERA)
             .subscribe {
                 previewView.post {
-
                     cameraProviderFuture = ProcessCameraProvider.getInstance(this)
 
                     val cameraSelector = CameraSelector.Builder()
@@ -77,12 +76,6 @@ class MainActivity : AppCompatActivity() {
                             analysis
                         )
                     }, ContextCompat.getMainExecutor(this))
-//                    CameraX.bindToLifecycle(
-//                        this@MainActivity,
-//                        preview,
-//                        analysis
-//                    )
-
                 }
             }
     }
